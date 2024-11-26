@@ -1,0 +1,26 @@
+﻿@model CRUD_April_261124.Models.validationClasses.loginClass
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>updateLogin</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("updatelogin", "Account", FormMethod.Post))
+        {
+
+            <table>
+                <tr><td>@Html.LabelFor(x => x.userID)</td><td>@Html.TextBoxFor(x => x.userID)</td><td></td></tr>
+                <tr><td>@Html.LabelFor(x => x.password)</td><td>@Html.TextBoxFor(x => x.password)</td><td></td></tr>
+                <tr><td colspan="3"><input type="submit" value="Submit"> <input type="reset" value="Reset" /></td></tr>
+            </table>
+        }
+    </div>
+</body>
+</html>

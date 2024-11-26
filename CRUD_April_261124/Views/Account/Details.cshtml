@@ -1,0 +1,28 @@
+﻿@model CRUD_April_261124.Models.tbllogin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Details", "Account", FormMethod.Post))
+        {
+            @Html.HiddenFor(x => x.Id)
+           
+        <table>
+            <tr><td>@Html.LabelFor(x => x.userID)</td><td>@Html.DisplayFor(x => x.userID) @Html.HiddenFor(x => x.userID)</td><td></td></tr>
+            <tr><td>@Html.LabelFor(x => x.password)</td><td>@Html.DisplayFor(x => x.password) @Html.HiddenFor(x => x.password)</td><td></td></tr>
+           
+        </table>
+        }
+        @Html.ActionLink("Go to index page","index","account")
+    </div>
+</body>
+</html>
